@@ -11,8 +11,11 @@ import {
 import { authors, books } from "./data";
 import BookType from "./schemas/Book";
 import AuthorType from "./schemas/Author";
+import cors from "cors";
 
 const app = express();
+
+app.use(cors());
 
 const RootQueryType = new GraphQLObjectType({
 	name: "query",
